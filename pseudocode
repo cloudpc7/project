@@ -1,0 +1,24 @@
+1. Define required constant:
+  1.1)Create an object that holds the 4 buttons on the board that is color coded. 
+  1.2 Create a randomized array that pushes a sequence of numbers that the computer will hold. 
+  1.3)Create an empty array for the player when the player tries to react to the computer sequence and match. 
+  1.4)Create a timing function that will hold null while the computer is outputing a sequence.
+
+2. Define required variables used to track the state of the game:
+    2.1 Create a timing function that let's you know when it is the player's turn.
+    2.2 Create a computer object for sequence of colors. 
+    2.3 Create a player object for sequence of colors that is clicked on. 
+3. Store elements on the page that will be accessed in code more than once in variables to make code.
+    3.1 create 4 elements for each color sequence(blue,yellow,red,green);
+    3.2 create start button;
+    3.3 create a reset button;
+4. Create an init function that initializes the state variables;
+    4.1 Initialize the start button
+    4.2 Initialize the timer. 
+    4.3 Initialize the computer sequence.
+    4.4 Initialize a function that create a null value while computer is providing  a sequence so player cannot interrupt. 
+5. Render those state variables to the page
+    5.1 Render the start button, reset button.
+    5.2 Render the computer sequence to the page
+    5.3 Render the player sequence after the computer sequence finishes. 
+    
