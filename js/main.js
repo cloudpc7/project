@@ -1,32 +1,39 @@
 /*----- constants -----*/
-const buttons = {
-    0: 'blue',
-    1: 'red',
-    2: 'yellow',
-    3: 'green'
-}
-/*----- app's state (variables) -----*/
-const computer, player, start, reset, timer
-/*----- cached element references -----*/
-const sequence = {
-    'blue': document.querySelector('blue'),
-    'red': document.querySelector('red'),
-    'yellow': document.querySelector('yellow'),
-    'green': document.querySelector('green')
-}
-computer = [];
-player = [];
-/*----- event listeners -----*/
+ const buttons = {
+     0: 'blue',
+     1: 'red',
+     2: 'yellow',
+     3: 'green'
+ }
+ /*----- app's state (variables) -----*/
+ let computer, player, reset, time, start
+ /*----- cached element references -----*/
+time = 3;
+ /*----- event listeners -----*/
+ document.getElementById("start").addEventListener("click",starter);
+ //document.getElementById("reset").addEventListener("click",restart);
 /*----- functions -----*/
+function starter(e){
+    let start = setInterval(function(){
+        if(time <=0){
+            clearInterval(start);
+            document.getElementById("timer").innerHTML = "";
+        }else{
+            document.getElementById("timer").innerHTML = time;
+        }
+
+    time -= 1;
+    },3000);
+}
+
+// function restart(e){
+//     starter
+// }
 function init(){
 
 }
 init();
 
 function render(){
-
-};
-
-function simon(){
 
 }
