@@ -45,26 +45,39 @@ h1 {
     margin-left: 5px;
 }
 #red  {
-    background-image: linear-gradient(to right,#FF0000, #CC0000,#990000);
+    background: linear-gradient(to right,#FF0000, #CC0000,#990000);
     border-top-left-radius: 100%;
 }
 
+.light-0{ 
+    background: linear-gradient(to right,#f07a7a, #964343,#eff1d6) !important;
+}
+
 #blue {
-    background-image: linear-gradient(to right, #0000FF, #0000CD,#000080);
+    background: linear-gradient(to right, #0000FF, #0000CD,#0e0e75);
     border-top-right-radius: 100%;
-    
-    
+}
+
+.light-1{
+    background: linear-gradient(to right, #7171f5, #262679,#cacaf5) !important;
 }
 
 #yellow {
-    background-image: linear-gradient(to right, #FFFF00,#CCCC00,#999900);
+    background: linear-gradient(to right, #FFFF00,#CCCC00,#424205);
     border-bottom-left-radius: 100%;
-   
-} 
+}
+
+.light-2{
+    background: linear-gradient(to right, #585809,#949446,#f3f3be) !important;
+}
 
 #green {
-    background-image:linear-gradient(to right,#00FF00,#00CC00,#009900);
+    background:linear-gradient(to right,#00FF00,#00CC00,#009900);
     border-bottom-right-radius: 100%;
+}
+
+.light-3{
+    background:linear-gradient(to right,#053305,#358335,#70dee6) !important;
 }
 
 #timer{

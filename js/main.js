@@ -46,9 +46,9 @@ function renderSequence(cb){
         } else {
             const code = randomSequence[codeIdx];
             //display button as on
-            colorBtns[code].classList.add("light");
+            colorBtns[code].classList.add(`light-${code}`);
             setTimeout(function (){
-                colorBtns[code].classList.remove("light");
+                colorBtns[code].classList.remove(`light-${code}`);
                 codeIdx++;
             }, duration);
         }
