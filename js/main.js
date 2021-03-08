@@ -1,19 +1,14 @@
 /*----- constants -----*/
-const duration = 1800; // show code duration
-const gap = 600; // time between  codes
-const colors = {
-    0: document.getElementById("red"),
-    1: document.getElementById("blue"),
-    2: document.getElementById("yellow"),
-    3: document.getElementById("green")
-}
+const duration = 1200; // show code duration
+const gap = 300; // time between  codes
+
  /*----- app's state (variables) -----*/
  let isPlayersTurn, randomSequence, playerSequence, gameOver;
 
  /*----- cached element references -----*/
 const msgEl = document.getElementById("msg");
 const startBtn = document.getElementById("start");
-const colorBtns = document.querySelectorAll("#board > button");
+const colorBtns = Array.from(document.querySelectorAll("#board > button")); // creating an array from node list
  
 /*----- event listeners -----*/
 startBtn.addEventListener("click", handleStartClick);
@@ -22,24 +17,26 @@ document.getElementById("board").addEventListener("click", handleColorClick);
 /*----- functions -----*/
 init();
 function handleStartClick(){
+    init();
     if(!gameOver || isPlayersTurn) return;
     gameOver = false;
-    isPlayersTurn = false;
     randomSequence = [];
-    render();
-    // while (!gameOver){
-        //computer sequenece picks random number.
-        randomSequence.push(Math.floor(Math.random() * 4));
-        console.log(randomSequence);
-        render();
-        //render computer sequence.
-        renderSequence(function (){
-            isPlayersTurn = true;
-            playerSequence = [];
-            render();
-        });
-    // }
+    doComputerTurn();
 }
+
+function doComputerTurn(){
+    isPlayersTurn = false;
+    //computer sequenece picks random number.
+    randomSequence.push(Math.floor(Math.random() * 4));
+    render();
+    //render computer sequence.
+    renderSequence(function (){
+        isPlayersTurn = true;
+        playerSequence = [];
+        render();
+    });
+}
+
 function renderSequence(cb){
     let codeIdx = 0;
     let timerId = setInterval(function(){
@@ -59,8 +56,18 @@ function renderSequence(cb){
 }
 function handleColorClick(e){
     if(e.target.id === "board" || gameOver || !isPlayersTurn ) return;
-    //what is the state to update and test if player just lost
-    // if gameover true show player loss
+    
+    const code = colorBtns.indexOf(e.target);
+    console.log(code);
+    playerSequence.push(code);
+    const codeIdx = playerSequence.length -1;
+    const correctCode = playerSequence[codeIdx] === randomSequence[codeIdx];
+    if (correctCode && randomSequence.length === codeIdx +1){
+        doComputerTurn();
+    } else if (!correctCode){
+        gameOver = true;
+        render();
+    }
 }
 
 function render(){
