@@ -1,21 +1,18 @@
 /*----- constants -----*/
  /*----- app's state (variables) -----*/
- let computer, player, reset, start,changeColor, timer;
+ let  start,changeColor, timer, win, turn;
  /*----- cached element references -----*/
-
- time = 4;
-
 computer = {
-    0: document.getElementById("red"),
-    1: document.getElementById("blue"),
-    2: document.getElementById("yellow"),
-    3: document.getElementById("green")
+    0: "red",
+    1: "blue",
+    2: "yellow",
+    3: "green"
 }
 player = {
-    0: document.getElementById("red"),
-    1: document.getElementById("blue"),
-    2: document.getElementById("yellow"),
-    3: document.getElementById("green")
+    0: "red",
+    1: "blue",
+    2: "yellow",
+    3: "green"
 }
  /*----- event listeners -----*/
  document.getElementById("start").addEventListener("click",computeSequence);
@@ -36,9 +33,8 @@ timer = setInterval (function (){
     }
 },3000);
 
-function computeSequence(){
+function computeSequence(color){
     const compute = computer[Object.keys(computer)[Math.floor(Math.random() * Object.keys(computer).length)]];
-    timer;
 }
 
 
