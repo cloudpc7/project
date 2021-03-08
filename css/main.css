@@ -37,7 +37,7 @@ h1 {
 #reset {
     margin: 20px;
 }
-#red {
+#btn1 {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -45,51 +45,57 @@ h1 {
 
 
 
-#red > button {
+#red  {
     background-image: linear-gradient(to right,#FF0000, #CC0000,#990000);
     width: 6.5vw;
-    height: 13vh;
+    height: 12vh;
     border-top-left-radius: 100%;
     margin-top: 5px;
 }
 
-#blue {
+#btn2 {
     display: grid;
     justify-content: center;
     align-items: center;
 }
-#blue > button {
+#blue {
     background-image: linear-gradient(to right, #0000FF, #0000CD,#000080);
     width:6.5vw;
-    height: 13vh;
+    height: 12vh;
     border-top-right-radius: 100%;
     margin-top: 5px;
 }
 
-#yellow {
+#btn3 {
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-#yellow > button{
+#yellow {
     background-image: linear-gradient(to right, #FFFF00,#CCCC00,#999900);
     width: 6.5vw;
-    height: 13vh;
+    height: 12vh;
     border-bottom-left-radius: 100%;
     margin-bottom: 5px;
 } 
 
-#green {
+#btn4 {
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-#green > button {
+#green {
     background-image:linear-gradient(to right,#00FF00,#00CC00,#009900);
     width: 6.5vw;
-    height: 13vh;
+    height: 12vh;
     border-bottom-right-radius: 100%;
     margin-bottom: 5px;
+}
+
+#timer{
+    display:grid;
+    justify-content: center;
+    align-items: center;
 }

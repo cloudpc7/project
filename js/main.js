@@ -1,14 +1,10 @@
 /*----- constants -----*/
- const buttons = {
-     0: 'blue',
-     1: 'red',
-     2: 'yellow',
-     3: 'green'
- }
  /*----- app's state (variables) -----*/
- let computer, player, reset, time, start;
+ let computer, player, reset, start,changeColor, timer;
  /*----- cached element references -----*/
-time = 3;
+
+ time = 4;
+
 computer = {
     0: document.getElementById("red"),
     1: document.getElementById("blue"),
@@ -22,41 +18,44 @@ player = {
     3: document.getElementById("green")
 }
  /*----- event listeners -----*/
- document.getElementById("start").addEventListener("click",starter);
- //document.getElementById("reset").addEventListener("click",restart);
+ document.getElementById("start").addEventListener("click",computeSequence);
  
 /*----- functions -----*/
 init();
-function starter(e){
-    let start = setInterval(function(){
-        if(time <=0){
-            clearInterval(start);
-            document.getElementById("timer").innerHTML = "";
-        }else{
-            document.getElementById("timer").innerHTML = time;
-        }
 
-    time -= 1;
-    },3000);
-}
+timer = setInterval (function (){
+    time -=1;
+    if(time < 0){
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "";
+    } else {
+        document.getElementById("timer").innerHTML = time;
+        if(time === 0){
+            document.getElementById("timer").innerHTML = "<p style='color:green;'>GO!</p>";
+        }
+    }
+},3000);
 
 function computeSequence(){
-    for(let i in computer){
-
-    }
+    const compute = computer[Object.keys(computer)[Math.floor(Math.random() * Object.keys(computer).length)]];
+    timer;
 }
-computeSequence();
+
 
 function playerSequence(){
     for(let i in player){
         player[i].addEventListener("click",play);
-        function play(e){
-            console.log(player[i]);
-        }
     }
-    
 }
-playerSequence();
+function play(e){
+    if(e.target.id === "red"){
+        e.target.style = ""
+    }
+    changeColor();
+};
+
 function init(){
+    computeSequence();
+    playerSequence();
 
 }
