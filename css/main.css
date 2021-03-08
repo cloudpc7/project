@@ -37,44 +37,42 @@ h1 {
 #reset {
     margin: 20px;
 }
-
-#red  {
-    background-image: linear-gradient(to right,#FF0000, #CC0000,#990000);
+#board > button{
     width: 7.5vw;
     height: 13vh;
-    border-top-left-radius: 100%;
+    outline: none;
     margin-top: 5px;
     margin-left: 5px;
+}
+#red  {
+    background-image: linear-gradient(to right,#FF0000, #CC0000,#990000);
+    border-top-left-radius: 100%;
 }
 
 #blue {
     background-image: linear-gradient(to right, #0000FF, #0000CD,#000080);
-    width:7.5vw;
-    height: 13vh;
     border-top-right-radius: 100%;
-    margin-top: 4px;
+    
     
 }
 
 #yellow {
     background-image: linear-gradient(to right, #FFFF00,#CCCC00,#999900);
-    width: 7.5vw;
-    height: 13vh;
     border-bottom-left-radius: 100%;
-    margin-bottom: 5px;
-    margin-left: 5px;
+   
 } 
 
 #green {
     background-image:linear-gradient(to right,#00FF00,#00CC00,#009900);
-    width: 7.5vw;
-    height: 13vh;
     border-bottom-right-radius: 100%;
-    margin-bottom: 5px;
 }
 
 #timer{
     display:grid;
     justify-content: center;
     align-items: center;
+}
+
+.light{
+    border: 1vmin solid white;
 }
