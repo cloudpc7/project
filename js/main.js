@@ -14,6 +14,9 @@ player = {
     2: "yellow",
     3: "green"
 }
+
+randomSequence = Math.floor(Math.random() * (Object.keys(computer).length));
+console.log(randomSequence);
  /*----- event listeners -----*/
  document.getElementById("start").addEventListener("click",computeSequence);
  
@@ -21,6 +24,7 @@ player = {
 init();
 
 timer = setInterval (function (){
+    time = 4;
     time -=1;
     if(time < 0){
         clearInterval(timer);
@@ -34,14 +38,11 @@ timer = setInterval (function (){
 },3000);
 
 function computeSequence(color){
-    const compute = computer[Object.keys(computer)[Math.floor(Math.random() * Object.keys(computer).length)]];
+    
 }
 
 
 function playerSequence(){
-    for(let i in player){
-        player[i].addEventListener("click",play);
-    }
 }
 function play(e){
     if(e.target.id === "red"){
