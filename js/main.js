@@ -1,7 +1,14 @@
 /*----- constants -----*/
+const colors = {
+    0: document.getElementById("red"),
+    1: document.getElementById("blue"),
+    2: document.getElementById("yellow"),
+    3: document.getElementById("green")
+}
  /*----- app's state (variables) -----*/
- let  start,changeColor, timer, win, turn;
+ let  start, timer, win, turn, time, randomSequence, computerSequence, playerSequence;
  /*----- cached element references -----*/
+ time = 3;
 computer = {
     0: "red",
     1: "blue",
@@ -15,44 +22,34 @@ player = {
     3: "green"
 }
 
-randomSequence = Math.floor(Math.random() * (Object.keys(computer).length));
-console.log(randomSequence);
+computerSequence = [];
+playerSequence = [];
+turn = null;
+
  /*----- event listeners -----*/
- document.getElementById("start").addEventListener("click",computeSequence);
- 
+ //document.getElementById("start").addEventListener("click",starter());
+ document.querySelectorAll("button").addEventListener("click",play);
 /*----- functions -----*/
 init();
 
-timer = setInterval (function (){
-    time = 4;
-    time -=1;
-    if(time < 0){
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "";
-    } else {
-        document.getElementById("timer").innerHTML = time;
-        if(time === 0){
-            document.getElementById("timer").innerHTML = "<p style='color:green;'>GO!</p>";
-        }
-    }
-},3000);
+// function computeSequence(){
+//     if(turn === null){
+//         randomSequence = Math.floor(Math.random() * (Object.keys(computer).length) +1);
+//     }
+//     const sequence = setTimeout(function (){
+//         computerSequence.push(randomSequence);
+//     },800);
+//     clearTimeout(sequence);
+// }
+// computeSequence();
 
-function computeSequence(color){
-    
-}
-
-
-function playerSequence(){
-}
 function play(e){
-    if(e.target.id === "red"){
-        e.target.style = ""
-    }
-    changeColor();
-};
+    console.log(e.target);
+}
+function render(){
+
+}
 
 function init(){
-    computeSequence();
-    playerSequence();
 
 }
