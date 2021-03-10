@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const sounds = {
+const sounds ={
     0: new Audio("./sound/Goofy Laugh-SoundBible.com-180933118.mp3"),
     1: new Audio("./sound/Slap-SoundMaster13-49669815.mp3"),
     2: new Audio("./sound/Upper Cut-SoundBible.com-1272257235.mp3"),
