@@ -52,7 +52,7 @@ function renderSequence(cb){
             const code = randomSequence[codeIdx];
             //display button as on
             colorBtns[code].classList.add(`light-${code}`);
-
+            sounds[code].play();
             setTimeout(function (){
                 colorBtns[code].classList.remove(`light-${code}`);
                 codeIdx++;
