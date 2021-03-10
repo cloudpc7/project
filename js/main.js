@@ -1,10 +1,15 @@
 /*----- constants -----*/
+const sounds = {
+    0: new Audio("./sound/Goofy Laugh-SoundBible.com-180933118.mp3"),
+    1: new Audio("./sound/Slap-SoundMaster13-49669815.mp3"),
+    2: new Audio("./sound/Upper Cut-SoundBible.com-1272257235.mp3"),
+    3: new Audio("./sound/Upper Cut-SoundBible.com-1272257235.mp3")
+}
 const duration = 1200; // show code duration
 const gap = 300; // time between  codes
 
  /*----- app's state (variables) -----*/
  let isPlayersTurn, randomSequence, playerSequence, gameOver;
-
  /*----- cached element references -----*/
 const msgEl = document.getElementById("msg");
 const startBtn = document.getElementById("start");
@@ -47,6 +52,7 @@ function renderSequence(cb){
             const code = randomSequence[codeIdx];
             //display button as on
             colorBtns[code].classList.add(`light-${code}`);
+
             setTimeout(function (){
                 colorBtns[code].classList.remove(`light-${code}`);
                 codeIdx++;
@@ -56,8 +62,8 @@ function renderSequence(cb){
 }
 function handleColorClick(e){
     if(e.target.id === "board" || gameOver || !isPlayersTurn ) return;
-    
     const code = colorBtns.indexOf(e.target);
+    sounds[code].play();
     console.log(code);
     playerSequence.push(code);
     const codeIdx = playerSequence.length -1;
