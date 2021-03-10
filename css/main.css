@@ -3,7 +3,10 @@
 }
 
 body{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -19,30 +22,34 @@ h1 {
 }
 
 #board {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr 1fr;
     grid-template-rows: 50% 50%;
     justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    width: 16vw;
-    height: 16vw;
+    width: 50vmin;
+    height: 50vmin;
     background-color: rgb(0,0,0);
     border-radius: 50%;
-    box-shadow: 10px 10px 10px 0px rgb(0,0,0,0.2);
-}
-#start {
-  margin: 20px;
 }
 
-#reset {
-    margin: 20px;
+#msg{
+    margin: 3vmin 0 3vmin 0;
 }
+
+#start {
+    margin: 3vmin 0 0 0;
+}
+
 #board > button{
-    width: 7.5vw;
-    height: 13vh;
+    width: 22vmin;
+    height: 22vmin;
     outline: none;
-    margin-top: 5px;
-    margin-left: 5px;
+    /* justify-content: center;
+    align-items: center; */
 }
 #red  {
     background: linear-gradient(to right,#FF0000, #CC0000,#990000);
@@ -55,7 +62,7 @@ h1 {
 
 #blue {
     background: linear-gradient(to right, #0000FF, #0000CD,#0e0e75);
-    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
 }
 
 .light-1{
@@ -64,7 +71,7 @@ h1 {
 
 #yellow {
     background: linear-gradient(to right, #FFFF00,#CCCC00,#424205);
-    border-bottom-left-radius: 100%;
+    border-top-right-radius: 100%;
 }
 
 .light-2{
