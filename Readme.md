@@ -1,4 +1,4 @@
-# <div align="center>Simon</div>
+# SIMON
 [Simon](https://cloudpc7.github.io/project/)
 
 >Simon is a game where the fun never stops and you must succeed at memorizing the next color in order to achieve the next level. What level can you get up to is up to you. Can you win or will you just keep on playing?!
@@ -18,4 +18,4 @@
 ### Javascript
 
 * Following the guide I created constants, state variables, cached variables, eventListeners, and the initializer. 
- 
+
