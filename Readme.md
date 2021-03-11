@@ -19,3 +19,12 @@
 
 * Following the guide I created constants, state variables, cached variables, eventListeners, and the initializer. 
 
+* Initializing the game starts with the start button.
+
+* Once the game is started a setInterval function is set in motion and calls whether or not the game is over or whether it is the players turn.
+
+* If it is the computers turn there is a random sequence that is generated within a certain amount of time known by a constant called a duration and a gap. 
+
+* The duration and gap allows time for the computer to turn on and off the lights inbetween sequencing incrementing the index of the light and random sequence as the game is played. 
+
+*
