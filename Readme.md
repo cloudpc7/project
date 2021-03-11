@@ -1,7 +1,8 @@
 # SIMON
 [Simon](https://cloudpc7.github.io/project/)
 
-> **Simon** is a game where the fun never stops and you must succeed at memorizing the next color in order to achieve the next level. What level can you get up to is up to you. Can you win or will you just keep on playing?!
+> "**Simon** is a game where the fun never stops and you must succeed at memorizing the next color >in order to achieve the next level. What level can you get up to is up to you. Can you win or will >you just keep on playing?!"
+
 <img src="/simonPic.jpg">;
 
 # Technologies Used...
@@ -41,4 +42,4 @@
 * The render sequence is called and performs initialization of the index sequence. If the random sequence and the length of the sequence equals 0  return to the callback function. 
 
 * I created a variable to instruct where the index of the random number is and then turned on the light. 
-* Then there is a [_setTimeOut_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals) interval function to turn off the light. This is an asynchronous call back function to perform a set of steps within a certain amount of time "_duration_"
+* Then there is a [_setTimeOut_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals) interval function to turn off the light. This is an asynchronous call back function to perform a set of steps within a certain amount of time "_duration_".
