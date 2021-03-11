@@ -102,13 +102,3 @@ h1 {
 .light-3{
     background: #09e409 !important;
 }
-
-#timer{
-    display:grid;
-    justify-content: center;
-    align-items: center;
-}
-
-.light{
-    border: 1vmin solid white;
-}
