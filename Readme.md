@@ -1,11 +1,11 @@
 # SIMON
 [Simon](https://cloudpc7.github.io/project/)
 
->**Simon** is a game where the fun never stops and you must succeed at memorizing the next color in order to achieve the next level. What level can you get up to is up to you. Can you win or will you just keep on playing?!
+> **Simon** is a game where the fun never stops and you must succeed at memorizing the next color in order to achieve the next level. What level can you get up to is up to you. Can you win or will you just keep on playing?!
 <img src="/simonPic.jpg" align="center">;
 
 ### HTML
-* The _HTML_ is pretty simple it uses a body completed with a title then a div with four buttons styled with id's inside. ß
+* The _HTML_ is pretty simple it uses a body completed with a title then a div with four buttons styled with id's inside.
 
 ### CSS
 * The CSS was created by using _flexbox_.
