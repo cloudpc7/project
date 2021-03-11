@@ -41,4 +41,4 @@
 * The render sequence is called and performs initialization of the index sequence. If the random sequence and the length of the sequence equals 0  return to the callback function. 
 
 * I created a variable to instruct where the index of the random number is and then turned on the light. 
-* Then there is a [_setTimeOut_] interval function to turn off the light. This is an asynchronous call back function to perform a set of steps within a certain amount of time "_duration_"
+* Then there is a [_setTimeOut_](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals) interval function to turn off the light. This is an asynchronous call back function to perform a set of steps within a certain amount of time "_duration_"
