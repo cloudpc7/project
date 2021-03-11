@@ -22,7 +22,7 @@
 * items are centered to display in the middle of the screen for readability and functionality. 
 
 ### PsuedoCode
-* The PsuedoCode is created to provide instructions on how the Simon game was designed.
+* The _PsuedoCode_ is created to provide instructions on how the Simon game was designed.
 * The game is developed by using the [Guide to Building a Browser Game](https://gist.github.com/jim-clark/6f1919291f6007b2c0b2c93d925d6bac) and help with the _Browser Game App Flow_.
 
 ### Javascript
