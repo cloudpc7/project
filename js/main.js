@@ -5,31 +5,31 @@ const sounds ={ // Create an object that contains the mp3 audio files for each b
     2: new Audio("./sound/Upper Cut-SoundBible.com-1272257235.mp3"),
     3: new Audio("./sound/Upper Cut-SoundBible.com-1272257235.mp3")
 }
-const duration = 1200; // show code duration; duration of time for computer to randomly choose a color.
-const gap = 300; // time between  codes; Creates a gap inbetween computer turn and player turn. 
+const duration = 1200; 
+const gap = 300; 
 
  /*----- app's state (variables) -----*/
- let isPlayersTurn, randomSequence, playerSequence, gameOver; // end of game, players turn computer's turn & each sequence that was played
+ let isPlayersTurn, randomSequence, playerSequence, gameOver;
  /*----- cached element references -----*/
-const msgEl = document.getElementById("msg"); // created h2 element to display message of who's turn it is and status of game. 
+const msgEl = document.getElementById("msg"); 
 const startBtn = document.getElementById("start");
-const colorBtns = Array.from(document.querySelectorAll("#board > button")); // creating an array from node list
+const colorBtns = Array.from(document.querySelectorAll("#board > button")); 
  
 /*----- event listeners -----*/
-startBtn.addEventListener("click", handleStartClick); // event listener for when player clicks the start button. 
-document.getElementById("board").addEventListener("click", handleColorClick); // event listener for when player clicks buttons. 
+startBtn.addEventListener("click", handleStartClick); 
+document.getElementById("board").addEventListener("click", handleColorClick); 
 
 /*----- functions -----*/
-init();         // init function handles the initialization of the game.
+init();         
 function handleStartClick(){
     init();
-    if(!gameOver || isPlayersTurn) return; //if game is not over or it is the player's turn move on.
+    if(!gameOver || isPlayersTurn) return; 
     gameOver = false; 
-    randomSequence = []; // random sequence is an empty array
-    doComputerTurn(); // start the computer's turn 
+    randomSequence = [];
+    doComputerTurn(); 
 }
 
-function doComputerTurn(){ //Once the computer's starts player is unable to click. 
+function doComputerTurn(){ 
     isPlayersTurn = false;
     //computer sequenece picks random number.
     randomSequence.push(Math.floor(Math.random() * 4));
@@ -43,19 +43,18 @@ function doComputerTurn(){ //Once the computer's starts player is unable to clic
 }
 
 function renderSequence(cb){
-    let codeIdx = 0; // start at index 0
-    let timerId = setInterval(function(){ // function used to clear and set timeout function;
+    let codeIdx = 0; 
+    let timerId = setInterval(function(){ 
         if(codeIdx === randomSequence.length){
             clearInterval(timerId);
             return cb();
         } else {
-            const code = randomSequence[codeIdx]; //pick a random number
-            //display button as on
+            const code = randomSequence[codeIdx]; 
             colorBtns[code].classList.add(`light-${code}`); // turn on light;
             sounds[code].play();
             setTimeout(function (){
                 colorBtns[code].classList.remove(`light-${code}`); //turn off light
-                codeIdx++; // turn off each light in the random sequence. 
+                codeIdx++; 
             }, duration);// amount of time for the function the sequence to push in the numbers. 
         }
     }, duration + gap);
@@ -70,7 +69,7 @@ function handleColorClick(e){ // function for player pressing the buttons.
     const correctCode = playerSequence[codeIdx] === randomSequence[codeIdx];
     if (correctCode && randomSequence.length === codeIdx +1){// decide if what the player clicked 
         doComputerTurn();                                   //and the random sequence match
-    } else if (!correctCode){                               // no to arrays are the same so add one;
+    } else if (!correctCode){                               // no two arrays are the same so add one;
         gameOver = true;
         render();
     }
