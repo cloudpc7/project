@@ -6,7 +6,7 @@
 
 # Technologies Used...
 1. [**_HTML_**](https://developer.mozilla.org/en-US/docs/Web/HTML)
-2. [**_CSS_**] (https://developer.mozilla.org/en-US/docs/Web/CSS)
+2. [**_CSS_**](https://developer.mozilla.org/en-US/docs/Web/CSS)
 3. [**_Javascript_**](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 # Getting Started...
